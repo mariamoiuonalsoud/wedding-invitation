@@ -100,11 +100,11 @@ function Invitation() {
             />
             <div className="relative text-center flex flex-col items-center justify-center h-full">
               {/* تعديل الإزاحة لليمين pl-10 */}
-              <p className="font-names text-5xl md:text-8xl text-primary italic leading-[0.9] md:leading-[1] mb-1 pl-10 translate-x-3">
+              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-[1] mb-1 pl-4.9 translate-x-3">
                 Mohamed
               </p>
               <p className="font-names text-3xl md:text-4xl my-1 md:my-2 text-rose italic">&</p>
-              <p className="font-names text-5xl md:text-8xl text-primary italic leading-[0.9] md:leading-[1]">
+              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-[1]">
                 Sana
               </p>
             </div>
