@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 // استيراد الملفات من Assets
 import floralCorner from "@/assets/floral-corner.png";
 import floralWreath from "@/assets/floral-wreath.png";
-import weddingFavicon from "@/assets/weddingFavicon.png"; // استيراد الأيقونة
+import weddingFavicon from "@/assets/weddingFavicon.png";
 
 import { MusicToggle } from "@/components/MusicToggle";
 import { Toaster } from "@/components/ui/sonner";
@@ -19,7 +19,6 @@ export const Route = createFileRoute("/")({
         content: "You are invited to the wedding of Mohamed & Sana on Wednesday, 27 May 2026.",
       },
     ],
-    // ربط الأيقونة بشكل صحيح باستخدام المسار المستورد
     links: [{ rel: "icon", href: weddingFavicon }],
   }),
   component: Invitation,
@@ -41,33 +40,33 @@ function Section({ children, className = "" }: { children: React.ReactNode; clas
 }
 
 function Invitation() {
-  const mapsUrl = "https://maps.google.com"; // تأكدي من وضع رابط الخريطة الصحيح هنا
+  const mapsUrl = "https://maps.google.com";
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">
       <MusicToggle />
       <Toaster position="top-center" />
 
-      {/* Decorative floral backgrounds */}
+      {/* Decorative floral backgrounds - Updated classes to resolve Tailwind warnings */}
       <img
         src={floralCorner}
         alt=""
-        className="pointer-events-none absolute top-0 left-0 w-[55%] max-w-[400px] -translate-x-[10%] -translate-y-[10%] opacity-90"
+        className="pointer-events-none absolute top-0 left-0 w-[55%] max-w-100 translate-x-[-10%] translate-y-[-10%] opacity-90"
       />
       <img
         src={floralCorner}
         alt=""
-        className="pointer-events-none absolute top-0 right-0 w-[55%] max-w-[400px] translate-x-[10%] -translate-y-[10%] opacity-90 -scale-x-100"
+        className="pointer-events-none absolute top-0 right-0 w-[55%] max-w-100 translate-x-[10%] translate-y-[-10%] opacity-90 -scale-x-100"
       />
       <img
         src={floralCorner}
         alt=""
-        className="pointer-events-none absolute bottom-0 left-0 w-[55%] max-w-[400px] -translate-x-[10%] translate-y-[10%] opacity-90 -scale-y-100"
+        className="pointer-events-none absolute bottom-0 left-0 w-[55%] max-w-100 translate-x-[-10%] translate-y-[10%] opacity-90 -scale-y-100"
       />
       <img
         src={floralCorner}
         alt=""
-        className="pointer-events-none absolute bottom-0 right-0 w-[55%] max-w-[400px] translate-x-[10%] translate-y-[10%] opacity-90 -scale-100"
+        className="pointer-events-none absolute bottom-0 right-0 w-[55%] max-w-100 translate-x-[10%] translate-y-[10%] opacity-90 -scale-100"
       />
 
       <div className="relative max-w-2xl mx-auto pt-24 pb-32 z-10">
@@ -92,19 +91,18 @@ function Invitation() {
 
         {/* The Couple Names */}
         <Section className="mt-10 flex items-center justify-center">
-          <div className="relative w-[100vw] max-w-[700px] aspect-square flex items-center justify-center">
+          <div className="relative w-screen max-w-175 aspect-square flex items-center justify-center">
             <img
               src={floralWreath}
               alt=""
               className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="relative text-center flex flex-col items-center justify-center h-full">
-              {/* تعديل الإزاحة لليمين pl-10 */}
-              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-[1] mb-1 pl-4.9 translate-x-3">
+              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-none mb-1 pl-4.9 translate-x-3">
                 Mohamed
               </p>
               <p className="font-names text-3xl md:text-4xl my-1 md:my-2 text-rose italic">&</p>
-              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-[1]">
+              <p className="font-names text-5xl md:text-7xl text-primary italic leading-[0.9] md:leading-none">
                 Sana
               </p>
             </div>
