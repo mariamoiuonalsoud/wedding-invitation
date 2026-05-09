@@ -29,7 +29,7 @@
 }
 
 /* Force CSS Classes - لضمان تطبيق الخط حتى لو تعارض التيلويند */
-.font-display {
+.font-names {
   font-family: "Monsieur La Doulaise", cursive !important;
 }
 
@@ -38,6 +38,6 @@
   direction: rtl;
 }
 
-.font-names {
+.font-display {
   font-family: "Playfair Display", serif !important;
 }
