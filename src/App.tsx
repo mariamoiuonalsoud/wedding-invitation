@@ -74,7 +74,7 @@ export default function App() {
 
         {/* The Couple Names */}
         <Section className="mt-10 flex items-center justify-center">
-          <div className="relative w-screen max-w-175 aspect-square flex items-center justify-center">
+          <div className="relative w-screen max-w-180 aspect-square flex items-center justify-center">
             <img
               src={floralWreath}
               alt=""
